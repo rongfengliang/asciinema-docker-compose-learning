@@ -42,6 +42,9 @@ services:
     image: ghcr.io/asciinema/asciinema-server:latest
     container_name: asciinema_phoenix
     restart: unless-stopped
+    ports:
+      - "3000:3000"
+      - "4000:4000"
     links:
       - postgres
       - smtp
